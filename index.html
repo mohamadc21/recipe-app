@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="fontawesome/css/all.min.css">
+    <script src="script.js" defer></script>
+    <title>Recipe App</title>
+</head>
+<body>
+    <section>
+        <header>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4jX5_5gEJ9KRnWnMYTyU8DOr7JBAeJZDshw&usqp=CAU">
+                    <h3 class="logo">RECIPE APP</h3>
+                </a>
+            </div>
+            <div class="search-field">
+                <form id="form">
+                    <input type="text" id="search" placeholder="Search an a meal..">
+                    <button class="search-btn" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+            </div>
+            <div class="fav-meals-container">
+                <h4>Favorite Meals</h4>
+                <ul class="fav-meals" id="fav-meals">
+                </ul>
+            </div>
+        </header>
+        <main></main>
+        <div class="modal" id="modal">
+            <div class="modal-close" id="modal-close"></div>
+            <button class="close-modal" id="close-modal">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-content">
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p id="footer-info"></p>
+    </footer>
+    <script>
+        document.getElementById("footer-info").innerHTML = `
+        Created by <a href="mailto:wyattmohammad1371017@gmail.com">wyatt-Mohammad</a> &copy ${new Date().getFullYear()}
+        `
+    </script>
+    
+</body>
+</html>

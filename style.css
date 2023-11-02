@@ -16,7 +16,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: #eee;
+    background-color: #fff;
 }
 
 .logo {
@@ -167,7 +167,7 @@ main {
     position: absolute;
     top: 15px;
     left: 0;
-    background-color: #eee;
+    background-color: #fff;
     padding: 0.5rem 0.8rem;
     font-size: 0.7rem;
     border-top-right-radius: 3px;

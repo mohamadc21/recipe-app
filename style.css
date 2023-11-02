@@ -293,7 +293,7 @@ main {
 
 footer {
     margin-top: 4rem;
-    background-color: #111;
+    background-color: #222;
     color: #fff;
     padding: 1.5rem;
     text-align: center;
@@ -304,6 +304,11 @@ footer {
 
 footer p a {
     color: #fff;
+    text-decoration: none;
+}
+
+footer p a:hover {
+    text-decoration: underline;
 }
 
 

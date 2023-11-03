@@ -4,7 +4,6 @@ const favMeals = document.getElementById("fav-meals");
 const main = document.querySelector("main");
 const modal = document.getElementById("modal");
 const closeModalOverlay = document.getElementById("modal-close");
-const closeModalBtn = document.getElementById("close-modal");
 
 
 function getRandomMeal() {
@@ -127,8 +126,14 @@ function addLikedMeals(meal) {
     img.addEventListener("click", () => {
         modal.classList.add("active");
         const modalContent = modal.querySelector(".modal-content");
+        modalContent.scrollTop = 0;
         modalContent.innerHTML = `
-            <h3>${meal.strMeal}</h3>
+            <div class="modal-header">
+                <h3>${meal.strMeal}</h3>
+                <button class="close-modal" id="close-modal">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
             <div class="modal-img">
                 <img src="${meal.strMealThumb}">
             </div>
@@ -136,7 +141,12 @@ function addLikedMeals(meal) {
                 ${meal.strInstructions}
             </p>
         `
-        document.body.style.overflow = "hidden"
+        document.body.style.overflow = "hidden";
+        const closeModalBtn = modalContent.querySelector("#close-modal");
+        closeModalBtn.addEventListener("click", () => {
+            modal.classList.remove("active");
+            document.body.style.overflow = "auto"
+        });
     })
 
     favMeals.appendChild(li);
@@ -147,10 +157,6 @@ closeModalOverlay.addEventListener("click", () => {
     document.body.style.overflow = "auto"
 });
 
-closeModalBtn.addEventListener("click", () => {
-    modal.classList.remove("active");
-    document.body.style.overflow = "auto"
-});
 
 
 form.addEventListener("submit", (e) => {
